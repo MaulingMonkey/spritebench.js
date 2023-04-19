@@ -1,6 +1,6 @@
 # spritebench.js
 
-Benchmark sprite rendering in the browser.
+Benchmark sprite rendering in the browser by rendering 64 x 64 sprites to a 1024 x 1024 canvas.
 
 
 
