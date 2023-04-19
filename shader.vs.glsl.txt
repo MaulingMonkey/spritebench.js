@@ -1,0 +1,13 @@
+attribute mediump vec3 a_position;
+attribute mediump vec2 a_texcoord;
+
+varying mediump vec2 v_texcoord;
+
+void main() {
+    mediump vec4 pos = vec4(a_position * 2.0 / 1024.0, 1.0);
+    pos.x -= 1.0;
+    pos.y -= 1.0;
+    pos.y *= -1.0;
+    gl_Position = pos;
+    v_texcoord = a_texcoord;
+}

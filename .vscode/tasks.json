@@ -1,0 +1,24 @@
+{
+    "version":          "2.0.0",
+    "problemMatcher":   "$rustc", // XXX
+    "type":             "shell",
+    "presentation": {
+        "clear": true,
+    },
+    "tasks": [
+        {
+            "label":            "start server • debug",
+            "windows":          { "command": "start \"mmuhttpd•spritebench\" mmuhttpd" },
+            "dependsOn":        ["stop server", "cargo build --package maulingmonkey-spritebench-website --lib --target=wasm32-wasi"],
+        },
+        {
+            "label":            "start server • release",
+            "windows":          { "command": "start \"mmuhttpd•spritebench\" mmuhttpd" },
+            "dependsOn":        ["stop server", "cargo build --package maulingmonkey-spritebench-website --lib --target=wasm32-wasi --release"],
+        },
+        {
+            "label":            "stop server",
+            "windows":          { "command": "taskkill /fi \"WINDOWTITLE eq mmuhttpd•spritebench\"" },
+        },
+    ]
+}

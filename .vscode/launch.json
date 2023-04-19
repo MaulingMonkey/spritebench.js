@@ -1,0 +1,23 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name":                     "chrome • debug",
+            "type":                     "chrome",
+            "request":                  "launch",
+            "preLaunchTask":            "start server • debug",
+            "postDebugTask":            "stop server",
+            "url":                      "http://127.0.0.99:9001/?target=debug",
+            "webRoot":                  "${workspaceFolder}",
+        },
+        {
+            "name":                     "chrome • release",
+            "type":                     "chrome",
+            "request":                  "launch",
+            "preLaunchTask":            "start server • release",
+            "postDebugTask":            "stop server",
+            "url":                      "http://127.0.0.99:9001/?target=release",
+            "webRoot":                  "${workspaceFolder}",
+        },
+    ]
+}

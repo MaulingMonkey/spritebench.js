@@ -1,0 +1,6 @@
+{
+    "recommendations": [
+        "ms-vscode.js-debug",
+        "rust-lang.rust-analyzer",
+    ]
+}
